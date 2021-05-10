@@ -1,0 +1,20 @@
+import contextlib
+from typing import Any, Generator
+
+
+class A:
+    def __init__(self, *args: Any, **kwargs: Any) -> None:
+        pass
+
+    def close(self) -> None:
+        pass
+
+
+@contextlib.contextmanager
+def {{ name }}(*args: Any, **kwargs: Any) -> Generator[A, Any, None]:
+    resource = A(*args, **kwargs)
+    try:
+        yield resource
+    finally:
+        # Code to release resource, e.g.:
+        resource.close()

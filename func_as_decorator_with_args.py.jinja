@@ -1,0 +1,12 @@
+import functools
+from typing import Callable, Any
+
+
+def {{ name }}(*decargs: Any, **deckwargs: Any) -> Callable[[Callable[..., Any]], Callable[..., Any]]:
+    def decorate(func: Callable[..., Any]) -> Callable[..., Any]:
+        @functools.wraps(func)
+        def wrap(*args: Any, **kwargs: Any) -> Any:
+            result = func(*args, **kwargs)
+            return result
+        return wrap
+    return decorate

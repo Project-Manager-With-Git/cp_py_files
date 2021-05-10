@@ -1,0 +1,10 @@
+import functools
+from typing import Callable, Any
+
+
+def {{ name }}(func: Callable[..., Any]) -> Callable[..., Any]:
+    @functools.wraps(func)
+    def wrap(*args: Any, **kwargs: Any) -> Any:
+        result = func(*args, **kwargs)
+        return result
+    return wrap

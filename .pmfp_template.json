@@ -1,0 +1,61 @@
+{
+    "description": "python的代码生成模板组件集合",
+    "author": "hsz",
+    "template_type": "components",
+    "template_keys": {
+        "name": {
+            "description": "组件名",
+            "default": "example"
+        },
+        "app_name": {
+            "description": "项目app名",
+            "default": "{{ project_name }}"
+        },
+        "description": {
+            "description": "项目简介",
+            "default": "{{ description }}"
+        }
+    },
+    "components": {
+        "func_simple": {
+            "source": "func_simple.py.jinja",
+            "description": "python最简单函数定义",
+            "default_path": "{{ name }}.py"
+        },
+        "class_simple": {
+            "source": "class_simple.py.jinja",
+            "description": "python最简单的类定义",
+            "default_path": "{{ name }}.py"
+        },
+        "class_with_prop": {
+            "source": "class_with_prop.py.jinja",
+            "description": "最简单的带属性的类定义",
+            "default_path": "{{ name }}.py"
+        },
+        "func_as_decorator": {
+            "source": "func_as_decorator.py.jinja",
+            "description": "使用函数和闭包构造装饰器",
+            "default_path": "{{ name }}.py"
+        },
+        "func_as_decorator_with_args": {
+            "source": "func_as_decorator_with_args.py.jinja",
+            "description": "使用函数和闭包构造带参数的装饰器",
+            "default_path": "{{ name }}.py"
+        },
+        "func_as_decorator_can_with_args": {
+            "source": "func_as_decorator_can_with_args.py.jinja",
+            "description": "使用函数和闭包构造可带参数也可以不带的装饰器",
+            "default_path": "{{ name }}.py"
+        },
+        "func_as_context": {
+            "source": "func_as_context.py.jinja",
+            "description": "使用生成器函数构造一个上下文管理器",
+            "default_path": "{{ name }}.py"
+        },
+        "func_as_aiocontext": {
+            "source": "func_as_aiocontext.py.jinja",
+            "description": "使用生成器函数构造一个异步上下文管理器",
+            "default_path": "{{ name }}.py"
+        }
+    }
+}

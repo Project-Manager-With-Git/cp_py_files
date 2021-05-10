@@ -1,0 +1,20 @@
+"""构造可以带参数也可以不带参数的装饰器需要注意的就是第一层的第一个位置参数需要可以是可执行."""
+import functools
+from typing import Callable, Any, Union
+
+
+def {{ name }}(*decargs: Any, **deckwargs: Any) -> Union[Callable[..., Any], Callable[[Callable[..., Any]], Callable[..., Any]]]:
+    if not deckwargs and len(decargs) == 1 and callable(decargs[0]):
+        @functools.wraps(decargs[0])
+        def wrap(*args: Any, **kwargs: Any) -> Any:
+            result = decargs[0](*args, **kwargs)
+            return result
+        return wrap
+    else:
+        def decorate(func: Callable[..., Any]) -> Callable[..., Any]:
+            @functools.wraps(func)
+            def wrap(*args: Any, **kwargs: Any) -> Any:
+                result = func(*args, **kwargs)
+                return result
+            return wrap
+        return decorate
