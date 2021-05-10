@@ -12,10 +12,13 @@ class {{ name | title }}:
     def __init__(self, name: Optional[str] = None) -> None:
         self._name = name
 
-    def hello(self, name: str) -> str:
+    def __repr__(self):
+        return f"[{{ name | title }}]:<name: {self._name}>"
+
+    def hello(self) -> str:
         """测试类的方法hello"""
         return f"hello {self._name}"
 
-    def bye(self, name: str) -> str:
+    def bye(self) -> str:
         """测试类的方法bye"""
         return f"bye {self._name}"
