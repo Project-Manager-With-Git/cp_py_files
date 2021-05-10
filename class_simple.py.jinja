@@ -12,18 +12,6 @@ class {{ name | title }}:
     def __init__(self, name: Optional[str] = None) -> None:
         self._name = name
 
-    @property
-    def name(self) -> Optional[str]:
-        return self._name
-
-    @name.setter
-    def name(self, value: str) -> None:
-        self._name = value
-
-    @name.deleter
-    def name(self) -> None:
-        self._name = None
-
     def hello(self, name: str) -> str:
         """测试类的方法hello"""
         return f"hello {self._name}"
