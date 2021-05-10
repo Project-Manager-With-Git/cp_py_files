@@ -6,7 +6,7 @@ class {{ name | title }}:
     _name: Optional[str]
 
     @classmethod
-    def from_name(cls, name: str) -> "ClazEcho":
+    def from_name(cls, name: str) -> "{{ name | title }}":
         return cls(name=name)
 
     def __init__(self, name: Optional[str] = None) -> None:
