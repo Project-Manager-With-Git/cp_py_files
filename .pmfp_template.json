@@ -56,6 +56,11 @@
             "source": "func_as_aiocontext.py.jinja",
             "description": "使用生成器函数构造一个异步上下文管理器",
             "default_path": "{{ name }}.py"
+        },
+        "aredis_proxy": {
+            "source": "compontents/aredis_proxy.py.jinja",
+            "description": "aredis的代理对象",
+            "default_path": "aredis_proxy.py"
         }
     }
 }
