@@ -61,6 +61,16 @@
             "source": "compontents/aredis_proxy.py.jinja",
             "description": "aredis的代理对象",
             "default_path": "aredis_proxy.py"
+        },
+        "initfile": {
+            "source": "unversal/__init__.py.jinja",
+            "description": "通用的__init__.py",
+            "default_path": "__init__.py"
+        },
+        "mainfile": {
+            "source": "unversal/__main__.py.jinja",
+            "description": "通用入口文件",
+            "default_path": "__main__.py"
         }
     }
 }
