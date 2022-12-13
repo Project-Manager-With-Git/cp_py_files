@@ -71,6 +71,26 @@
             "source": "unversal/__main__.py.jinja",
             "description": "通用入口文件",
             "default_path": "__main__.py"
+        },
+        "aiossecli": {
+            "source": "clis/aiossecli.py.jinja",
+            "description": "异步语法的sse客户端",
+            "default_path": "aiossecli.py"
+        },
+        "aiowscli": {
+            "source": "clis/aiowscli.py.jinja",
+            "description": "异步语法的websocket客户端",
+            "default_path": "aiowscli.py"
+        },
+        "ssecli": {
+            "source": "clis/ssecli.py.jinja",
+            "description": "同步语法的sse客户端",
+            "default_path": "ssecli.py"
+        },
+        "wscli": {
+            "source": "clis/wscli.py.jinja",
+            "description": "同步语法的websocket客户端",
+            "default_path": "wscli.py"
         }
     }
 }
